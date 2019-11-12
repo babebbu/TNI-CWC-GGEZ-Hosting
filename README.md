@@ -9,7 +9,7 @@ This lab has a bunch of vulnerabilities which includes
 ## Installation
 
 ```
-git clone https://github.com/codesonteen/TNI-CWC-Nginx-PHP-FPM
-cd TNI-CWC-Nginx-PHP-FPM
+git clone https://github.com/codesonteen/TNI-CWC-GGEZ-Hosting
+cd TNI-CWC-GGEZ-Hosting
 sudo bash install.sh
 ```
