@@ -6,11 +6,16 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
+# Set Hostname
+hostnamectl set-hostname ggez-hosting
+sed -i "s/127.0.1.1/127.0.1.1 ggez-hosting/" /etc/hosts
+
 # Configure APT repository
 cp -rf env/apt/sources.list /etc/apt/sources.list
+apt update
 
-# Install Packages (Nginx, MySQL, PHP-FPM)
-apt install -y nginx mysql-server php-fpm php-mbstring php-xmlrpc php-soap php-gd php-xml php-intl php-mysql php-cli php-ldap php-zip php-curl
+# Install Packages (Nginx, PHP-FPM)
+apt install -y nginx php-fpm php-mbstring php-xmlrpc php-soap php-gd php-xml php-intl php-mysql php-cli php-ldap php-zip php-curl
 
 # Create Users
 useradd -m -d /home/grizz grizz
