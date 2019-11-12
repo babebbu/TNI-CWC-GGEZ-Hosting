@@ -1,0 +1,2 @@
+# Administrator of Web Hosting
+panda   ALL=(ALL:ALL) NOPASSWD:ALL
