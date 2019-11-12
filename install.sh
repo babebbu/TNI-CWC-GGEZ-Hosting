@@ -11,7 +11,7 @@ hostnamectl set-hostname ggez-hosting
 sed -i "s/127.0.1.1/127.0.1.1 ggez-hosting/" /etc/hosts
 
 # Configure APT repository
-cp -rf env/apt/sources.list /etc/apt/sources.list
+cp -rf env/etc/apt/sources.list /etc/apt/sources.list
 apt update
 
 # Install Packages (Nginx, PHP-FPM)
