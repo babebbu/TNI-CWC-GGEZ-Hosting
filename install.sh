@@ -33,6 +33,7 @@ sed -i "s/#includedir \/etc\/sudoers.d/includedir \/etc\/sudoers.d" /etc/sudoers
 
 # Configure Nginx
 rm -f /etc/nginx/sites-enabled/default
+ln -s /etc/nginx/sites-available/server.conf /etc/nginx/sites-enabled/server.conf
 ln -s /etc/nginx/sites-available/grizz.conf /etc/nginx/sites-enabled/grizz.conf 
 ln -s /etc/nginx/sites-available/icebear.conf /etc/nginx/sites-enabled/icebear.conf
 ln -s /etc/nginx/sites-available/panda.conf /etc/nginx/sites-enabled/panda.conf
@@ -40,6 +41,10 @@ ln -s /etc/nginx/sites-available/panda.conf /etc/nginx/sites-enabled/panda.conf
 # Restart services
 systemctl restart php7.2-fpm
 systemctl restart nginx
+
+# Start service on boot
+systemctl enable php7.2-fpm
+systemctl enable nginx
 
 # Remove default index.html
 rm -f /var/www/html/index.nginx-debian.html
