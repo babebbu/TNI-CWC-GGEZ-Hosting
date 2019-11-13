@@ -5,7 +5,7 @@ This lab has a bunch of vulnerabilities which includes
 
 ## Requirements
 - Ubuntu 18.04 LTS (Bionic Beaver)
-- Internet connection for `apt install`
+- Internet connection for `apt install` and `git`
 
 ## Installation
 
