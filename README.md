@@ -1,6 +1,6 @@
-# TNI-CWC-Nginx-PHP-FPM
+# TNI-CWC-GGEZ-Hosting
 This lab has a bunch of vulnerabilities which includes 
-- CVE-2019-11043
+- CVE-2019-11043 (PHP-FPM RegEx RCE)
 - Privilege Escalation (via sudoer's web)
 
 ## Requirements
