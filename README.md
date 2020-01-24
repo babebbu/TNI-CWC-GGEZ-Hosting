@@ -1,7 +1,7 @@
 # TNI-CWC-Nginx-PHP-FPM
 This lab has a bunch of vulnerabilities which includes 
 - CVE-2019-11043
-- Privilege Escalation
+- Privilege Escalation (via sudoer's web)
 
 ## Requirements
 - Ubuntu 18.04 LTS (Bionic Beaver)
